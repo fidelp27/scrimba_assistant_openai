@@ -1,0 +1,22 @@
+{
+  "name": "scrimba-agent",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "dev": "bun server.js --watch",
+    "build": "bun build"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.56.0",
+    "dotenv": "^17.2.1",
+    "fs": "^0.0.1-security",
+    "openai": "^5.15.0"
+  }
+}

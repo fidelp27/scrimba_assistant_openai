@@ -1,5 +1,11 @@
 # ReelRecs
 
+## Type
+
+Demo web application
+
+## Project Description
+
 A simple chat-based movie recommendation demo using the [OpenAI Assistants API](https://platform.openai.com/docs/assistants) and [Bun](https://bun.sh).
 
 ## Features

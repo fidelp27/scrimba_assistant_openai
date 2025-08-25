@@ -36,3 +36,18 @@ export async function retrieveMessages(thread_id) {
   console.log(threadMessages)
   return threadMessages;
 }
+
+// submit tool outputs
+export async function submitToolOutputs(thread_id, run_id, tool_outputs) {
+  // Nota: el SDK oficial usa este método con la firma (threadId, runId, { tool_outputs })
+  return openai.beta.threads.runs.submitToolOutputs(run_id, {thread_id,  tool_outputs });
+}
+
+// cancel run
+export async function cancelRun(thread_id, run_id) {
+  return await openai.beta.threads.runs.cancel(
+    run_id,
+    { thread_id: thread_id }
+  );
+}
+//cancelRun("thread_mvle20VXakc6nT7ddIWUWqsT","run_BlqLyTsYDJXz07pdRYBHCyW8");
